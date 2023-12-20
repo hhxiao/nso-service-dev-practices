@@ -14,8 +14,6 @@ from ncs.application import Service
 class ServiceCallbacks(Service):
     @Service.create
     def cb_create(self, tctx, root, service, proplist):
-        self.log.info('Service create(service=', service._path, ')') # pylint: disable=protected-access
-
         management_prefix = service.management_prefix
         self.log.debug(f'Value of management-prefix leaf is {management_prefix}')
         net = ipaddress.IPv4Network(management_prefix)
