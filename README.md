@@ -7,11 +7,9 @@
 Open the `~/src/nso-service-dev-practices/loopback/python/loopback/loopback.py` example again and study its contents.
 
 ```python
-# -*- mode: python; python-indent: 4 -*-
 import ipaddress
 import ncs
 from ncs.application import Service
-
 
 class ServiceCallbacks(Service):
     @Service.create
