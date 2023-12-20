@@ -18,7 +18,6 @@ class ServiceCallbacks(Service):
         self.log.debug(f'Value of management-prefix leaf is {management_prefix}')
         net = ipaddress.IPv4Network(management_prefix)
         management_address = list(net.hosts())[0]
-
         bgp_prefix = service.bgp_prefix
         self.log.debug(f'Value of bgp-prefix leaf is {bgp_prefix}')
         net = ipaddress.IPv4Network(bgp_prefix)
