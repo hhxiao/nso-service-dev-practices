@@ -1,11 +1,3 @@
-# Good software development practices
-
-[![Run in Cisco Cloud IDE](https://static.production.devnetcloud.com/codeexchange/assets/images/devnet-runable-icon.svg)](https://developer.cisco.com/codeexchange/devenv/NSO-developer/nso-service-dev-practices)
-
-## Loopback Python example
-
-Open the `~/src/nso-service-dev-practices/loopback/python/loopback/loopback.py` example again and study its contents.
-
 ```python
 import ipaddress
 import ncs
@@ -29,6 +21,3 @@ class ServiceCallbacks(Service):
         template = ncs.template.Template(service)
         template.apply('loopback-template', tvars)
 ```
-
-First thing that we can improve in the given code is to use a function that will calculate the management IP address and bgp address from the given prefix. With this we avoid repeating the same code for the calculation multiple times and we can also use it in the future.
-
